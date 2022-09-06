@@ -18,6 +18,10 @@
     </form>
 </div>
 
-
+    <div>
+        @foreach ($contato as $row)
+            <h1> {{$row->categoria}} </h1> 
+        @endforeach
+    </div>
 
 @endsection

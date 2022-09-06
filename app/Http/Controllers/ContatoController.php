@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\ContatoModel;
 
@@ -14,10 +13,8 @@ class ContatoController extends Controller
      */
     public function index()
     {
-        $categoria = ContatoModel::all();
-        foreach ($categoria as $row){
-            echo "<h1>" . $row->categoria . "</h1> <br>";
-        }
+        $contato = ContatoModel::all();
+        return view('contato', compact('contato'));        
         //
     }
 
